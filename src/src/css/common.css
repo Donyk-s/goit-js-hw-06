@@ -22,3 +22,17 @@ button {
   padding: 8px 12px;
   cursor: pointer;
 }
+.gallery {
+list-style: none;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 20px;
+}
+.itemlist{
+  transform: scale(0.9);
+  transition: transform 300ms linear;
+}
+.itemlist:hover {
+ transform: scale(1.1);
+}
