@@ -2,24 +2,20 @@
 const loginForm = document.querySelector('.login-form')
 loginForm.addEventListener('submit', onFormSubmit)
 
-const nameEmail = loginForm.elements.email
-const inputDataLength = nameEmail.value.length
 
-// console.log(inputDataLength)
-
-// console.log(loginForm)
 function onFormSubmit(event) {
     event.preventDefault()
-    const formData = new FormData(event.currentTarget)
-    console.log(formData)
-    formData.forEach((value, key) => {
-         console.log('onFormSubmit -> key', key)
-        console.log('onFormSubmit -> value', value)
-       
-if (inputDataLength == "") {
-    alert(`what is your email?", "M.Jackson?`)
-} return
-    })
+     const {
+    elements: { email, password },
+  } = event.currentTarget;
+  if (email.value.trim() === '' || password.value.trim() === '') {
+    return alert('Please fill in all the fields! M.Jackson');
+  } else {
+   const data = {};
+  const formData = new FormData(event.currentTarget);
+  formData.forEach((value, name) => (data[name] = value))
+    console.log(formData);
+    event.currentTarget.reset();
+  }
 }
 
-loginForm.addEventListener('click', () => loginForm.reset());
