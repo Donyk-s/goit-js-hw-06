@@ -13,4 +13,16 @@ function onChangeColor (event){
   console.log(hexColor);
 }  
   
+// 2 варіаент
+// const textColor = document.querySelector('.color');
+// const changeColorBtn = document.querySelector('.change-color');
+// const body = document.body;
 
+// const changeColor = () => {
+//   textColor.textContent = body.style.backgroundColor = getRandomHexColor();
+// };
+// 3 варіант
+// const changeColor = () => {
+//   textColor.textContent = getRandomHexColor();
+//   body.style.backgroundColor = textColor.textContent;
+// };
