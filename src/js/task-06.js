@@ -13,7 +13,7 @@ console.log(inputlength)
 input.addEventListener('input', onInputValue)
 
 input.addEventListener('blur', (Event) => {
-    if (dataLength == input.value.length) {
+    if (+dataLength === input.value.length) {
    
         input.classList.add('valid');
     input.classList.remove("invalid")    
