@@ -12,12 +12,8 @@ function onFormSubmit(event) {
     return alert('Please fill in all the fields! M.Jackson');
   } else {
     const data = {};
-    const formData = new FormData(event.currentTarget);
+    console.log({ email: email.value, password: password.value })
+     event.currentTarget.reset();
    
-    formData.forEach((value, name) => {
-      console.log({ email: email.value, password: password.value})
-     
-      event.currentTarget.reset();
-    })
   }
 }

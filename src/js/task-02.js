@@ -7,23 +7,11 @@ const ingredients = [
   'Condiments',
 ];
 const container = document.querySelector('#ingredients');
-//  const liItems = document.createElement("li");
 
-let newArray = []
-ingredients.map((ingredientsItem) => {
-  const liItems = document.createElement("li");
-  liItems.classList.add('item');
-  liItems.textContent = ingredientsItem;
-  newArray.push(ingredientsItem) 
+const newArray = ingredients.map((ingredientsItem) => {
+  const liItem = document.createElement("li");
+  liItem.classList.add('item');
+  liItem.textContent = ingredientsItem;
+  container.append(liItem)
  })  
-container.append(newArray)
-
-//2 variant
-//  const itemIngredients = ingredients.reduce(
-//   (acum, el) => (acum += `<li>${el}</li>`),
-//   ''
-//  );
-
-
-//  container.innerHTML = itemIngredients;
 
