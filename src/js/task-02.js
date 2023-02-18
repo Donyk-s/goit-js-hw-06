@@ -10,8 +10,10 @@ const container = document.querySelector('#ingredients');
 
 const newArray = ingredients.map((ingredientsItem) => {
   const liItem = document.createElement("li");
+   liItem.textContent = ingredientsItem;
   liItem.classList.add('item');
-  liItem.textContent = ingredientsItem;
-  container.append(liItem)
- })  
+ 
+  return liItem
+})  
+ container.append(...newArray)
 
